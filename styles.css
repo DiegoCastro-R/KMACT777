@@ -165,7 +165,13 @@ body{
   /* decrease base font on mobile for compactness */
   html, body { font-size:14px; }
 
-  .logo{width:100%;max-width:240px;height:auto}
+  .logo{
+    width:100%;
+    max-width:240px;
+    height:auto;
+    margin:0 auto 8px;
+    transform:none;
+  }
   .lead{font-size:14px}
   .lead.small{font-size:13px}
   .contact-inner{flex-direction:column;align-items:stretch}
@@ -185,8 +191,9 @@ body{
   .hero-inner{
     width:100%;
     max-width:256px;
-    aspect-ratio:1 / 1;
-    padding:8px;
+    aspect-ratio:unset;
+    min-height:auto;
+    padding:16px 8px 12px;
     transform:none;
     margin-inline:auto;
   }
@@ -285,7 +292,13 @@ body{
   /* mirrored mobile adjustments to ensure consistent sizing */
   html, body { font-size:14px; }
 
-  .logo{width:100%;max-width:240px;height:auto}
+  .logo{
+    width:100%;
+    max-width:240px;
+    height:auto;
+    margin:0 auto 8px;
+    transform:none;
+  }
   .lead{font-size:14px}
   .lead.small{font-size:13px}
   .contact-inner{flex-direction:column;align-items:stretch}
