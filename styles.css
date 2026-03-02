@@ -72,6 +72,7 @@ body{
 }
 
 .logo{
+  display:block;
   width:60vmin;
   max-width:420px;
   height:auto;
@@ -164,7 +165,7 @@ body{
   /* decrease base font on mobile for compactness */
   html, body { font-size:14px; }
 
-  .logo{width:240px;height:240px}
+  .logo{width:100%;max-width:240px;height:auto}
   .lead{font-size:14px}
   .lead.small{font-size:13px}
   .contact-inner{flex-direction:column;align-items:stretch}
@@ -183,7 +184,7 @@ body{
   /* Make the central square match the (mobile) background image size: full width but limited to logo size */
   .hero-inner{
     width:100%;
-    max-width:240px;
+    max-width:256px;
     aspect-ratio:1 / 1;
     padding:8px;
     transform:none;
@@ -284,7 +285,7 @@ body{
   /* mirrored mobile adjustments to ensure consistent sizing */
   html, body { font-size:14px; }
 
-  .logo{width:240px;height:240px}
+  .logo{width:100%;max-width:240px;height:auto}
   .lead{font-size:14px}
   .lead.small{font-size:13px}
   .contact-inner{flex-direction:column;align-items:stretch}
