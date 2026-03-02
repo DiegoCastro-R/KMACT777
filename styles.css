@@ -16,7 +16,7 @@ body{
   /* extreme page background: desert collage with a subtle green tint and low contrast */
   background:
     linear-gradient(0deg, rgba(6,56,42,0.55), rgba(6,56,42,0.55)),
-    url('/caa.jpg') center/cover no-repeat;
+    url('caa.jpg') center/cover no-repeat;
   color:var(--cream);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
@@ -39,7 +39,7 @@ body{
 /* HERO */
 .hero{
   position:relative;
-  background:linear-gradient(0deg, rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('/0101010101') center/cover no-repeat;
+  background:linear-gradient(0deg, rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('0101010101') center/cover no-repeat;
   min-height:60vh; /* flexible hero height so different resolutions can scroll */
   display:flex;
   align-items:flex-start;
