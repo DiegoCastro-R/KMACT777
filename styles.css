@@ -13,7 +13,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html,body,#root{min-height:100%}
 body{
-  /* extreme page background: desert collage with a subtle green tint and low contrast */
+  /* cactos + filtro verde por cima */
   background:
     linear-gradient(0deg, rgba(6,56,42,0.55), rgba(6,56,42,0.55)),
     url('caa.jpg') center/cover no-repeat;
@@ -30,7 +30,7 @@ body{
 .page{
   width:100%;
   max-width:var(--max-width);
-  background:linear-gradient(180deg, rgba(0,0,0,0.06), transparent);
+  background:linear-gradient(180deg, rgba(255,255,255,0.04), transparent);
   border-radius:8px;
   overflow:hidden;
   box-shadow: 0 6px 30px rgba(0,0,0,0.4);
@@ -39,7 +39,10 @@ body{
 /* HERO */
 .hero{
   position:relative;
-  background:linear-gradient(0deg, rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('0101010101') center/cover no-repeat;
+  /* mesmo fundo dos cactos com tom verde (área principal do site) */
+  background:
+    linear-gradient(0deg, rgba(6,56,42,0.55), rgba(6,56,42,0.55)),
+    url('caa.jpg') center/cover no-repeat;
   min-height:60vh; /* flexible hero height so different resolutions can scroll */
   display:flex;
   align-items:flex-start;
@@ -51,13 +54,13 @@ body{
 .hero-overlay{
   position:absolute;
   inset:0;
+  /* contraste para o texto sobre a foto */
   background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.2));
   pointer-events:none;
 }
 
 .hero-inner{
   position:relative;
-  /* match the hero background image size: use the same percentage as the desktop background-size */
   width:60%;
   max-width:820px;
   aspect-ratio:1 / 1; /* force a square */
@@ -187,7 +190,7 @@ body{
   .btn-cta .cta-line-1{font-size:12px}
   .btn-cta .cta-line-2{font-size:11px; padding:5px 6px}
 
-  /* Make the central square match the (mobile) background image size: full width but limited to logo size */
+  /* coluna central no mobile */
   .hero-inner{
     width:100%;
     max-width:256px;
@@ -203,18 +206,10 @@ body{
   body{padding:12px}
 }
 
-/* Desktop-only: raise the central text block (move it up) and reduce hero background image size */
+/* Desktop-only: raise the central text block (move it up) */
 @media (min-width:561px){
   .text-block{
     margin-top:-140px; /* increased negative margin to lift the central text on desktop only */
-  }
-
-  /* decrease background image size only on desktop so it appears smaller behind the hero */
-  .hero{
-    /* keep existing background layers but override image sizing and position for desktop */
-    background-position: center top;
-    background-size: 60%;
-    background-repeat: no-repeat;
   }
 }
 
@@ -240,6 +235,46 @@ body{
 }
 
 .contact-inner h3{margin:6px 0;font-size:15px;font-weight:700;color:var(--muted)}
+
+.contact-info{
+  flex-direction:column;
+  align-items:flex-start;
+  gap:10px;
+}
+
+.contact-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+  font-size:15px;
+  line-height:1.6;
+  width:100%;
+}
+
+.contact-list li{margin:4px 0}
+
+.contact-label{
+  font-weight:700;
+  color:var(--muted);
+  margin-right:6px;
+}
+
+.contact-list a{
+  color:var(--green-700);
+  font-weight:700;
+  text-decoration:underline;
+  text-underline-offset:2px;
+}
+
+.contact-list a:hover,
+.contact-list a:focus-visible{
+  color:var(--green-900);
+}
+
+.contact-sep{
+  margin:0 6px;
+  opacity:0.5;
+}
 
 .btn-whatsapp{
   background:transparent;
